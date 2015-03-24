@@ -11,5 +11,8 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require 'font_awesome/css/font-awesome.min.css'
+ *= require 'bootstrap.min.css'
+ *= require 'font_awesome/less/freelancer.less'
  *= require_self
  */
