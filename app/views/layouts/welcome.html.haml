@@ -22,34 +22,48 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "#page-top"} Start Bootstrap
+          %a.navbar-brand{:href => "#page-top"} Free Donate
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li.hidden
               %a{:href => "#page-top"}
             %li.page-scroll
-              %a{:href => "#portfolio"} Portfolio
+              %a{:href => "#about"} Как это работает
             %li.page-scroll
-              %a{:href => "#about"} About
+              %a{:href => "#portfolio"} Вещи
             %li.page-scroll
-              %a{:href => "#contact"} Contact
+              %a{:href => "#signup"} Регистрация
     %header
-      .container
+      .container#present-money
         .row
           .col-lg-12
-            %img.img-responsive{:alt => "", :src => "#{ asset_path( 'profile.png' ) }"}/
+            %img.img-responsive.present-image{:alt => "", :src => "#{ asset_path( 'present.png' ) }"}/
+            %img.img-responsive.money-image.hide{:alt => "", :src => "#{ asset_path( 'money.png' ) }"}/
             .intro-text
-              %span.name Start Bootstrap
+              %span.present.name Подари
               %hr.star-light/
-              %span.skills Web Developer - Graphic Artist - User Experience Designer
-    / Portfolio Grid Section
-    %section#portfolio
+              %span.money.skills
+                или заработай
+    / About Section
+    %section#about
       .container
         .row
           .col-lg-12.text-center
-            %h2 Portfolio
+            %h2 Как это работает
             %hr.star-primary/
+        .row{style: "text-align: center;"}
+          .col-lg-4.col-lg-offset-2
+            %p У каждого есть вещи, которые нам не уже нужны, но их жалко выбросить. Решение этой проблемы возможно с данным сервисом. Вы создаете объявление, о том, что хотите подарить или отдать вещь за небольшую плату. Люди, которым она действительно нужна - приезжают и забирают ее у Вас.
+          .col-lg-4
+            %p Если Вы хотите немного заработать на своей вещи, тогда ваше объявление будет работать в виде аукциона. Вы выбирате минимальную стоимость, а покупатели торгуются между собой, повышая ее. Последний человек поднявший цену - забирает ее у Вас. Подробнее об этом прочтите в руководстве пользователя.
+    / Portfolio Grid Section
+    %section#portfolio.success
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2 Категории вещей
+            %hr.star-light/
         .row
           .col-sm-4.portfolio-item
             %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
@@ -87,24 +101,8 @@
                 .caption-content
                   %i.fa.fa-search-plus.fa-3x
               %img.img-responsive{:alt => "", :src => "#{asset_path('portfolio/submarine.png')}"}/
-    / About Section
-    %section#about.success
-      .container
-        .row
-          .col-lg-12.text-center
-            %h2 About
-            %hr.star-light/
-        .row
-          .col-lg-4.col-lg-offset-2
-            %p Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.
-          .col-lg-4
-            %p Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!
-          .col-lg-8.col-lg-offset-2.text-center
-            %a.btn.btn-lg.btn-outline{:href => "#"}
-              %i.fa.fa-download
-              Download Theme
     / Contact Section
-    %section#contact
+    %section#signup
       .container
         .row
           .col-lg-12.text-center
