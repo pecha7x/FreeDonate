@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'haml-rails'
+gem 'devise', github: 'plataformatec/devise'
 
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'

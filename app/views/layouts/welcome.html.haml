@@ -22,7 +22,10 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "#page-top"} Free Donate
+          %a.navbar-brand{:href => "#page-top", style: "margin-top: -12px;"}
+            %span Free Donate
+            %br
+            %span.skills{style: "font-size: 28px;line-height: 30px;"} Отдам Даром
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
@@ -31,7 +34,7 @@
             %li.page-scroll
               %a{:href => "#about"} Как это работает
             %li.page-scroll
-              %a{:href => "#portfolio"} Вещи
+              %a{:href => "#portfolio"} Что отдать
             %li.page-scroll
               %a{:href => "#signup"} Регистрация
     %header
@@ -54,103 +57,72 @@
             %hr.star-primary/
         .row{style: "text-align: center;"}
           .col-lg-4.col-lg-offset-2
-            %p У каждого есть вещи, которые нам не уже нужны, но их жалко выбросить. Решение этой проблемы возможно с данным сервисом. Вы создаете объявление, о том, что хотите подарить или отдать вещь за небольшую плату. Люди, которым она действительно нужна - приезжают и забирают ее у Вас.
+            %p У людей есть вещи, которые уже не нужны, но их жалко выбросить. Эта ситуация знакома каждому и мы предлагаем решение вашей проблемы посредством данного сервиса. Вы создаете объявление, о том, что хотите подарить или отдать вещь за небольшую плату. Люди, которым она действительно нужна - приезжают и забирают ее у Вас.
           .col-lg-4
-            %p Если Вы хотите немного заработать на своей вещи, тогда ваше объявление будет работать в виде аукциона. Вы выбирате минимальную стоимость, а покупатели торгуются между собой, повышая ее. Последний человек поднявший цену - забирает ее у Вас. Подробнее об этом прочтите в руководстве пользователя.
-    / Portfolio Grid Section
+            %p
+              Если Вы хотите немного заработать на ненужных Вам вещах, тогда ваше объявление будет работать в виде аукциона. Вы устанавливаете минимальную стоимость, а покупатели торгуются между собой, повышая ее. Последний человек поднявший цену - забирает ее у Вас. Подробнее об этом прочтите в
+              = succeed "." do
+                %a{:href => "http://rambler.ru"} Руководстве Пользователя
     %section#portfolio.success
       .container
         .row
           .col-lg-12.text-center
-            %h2 Категории вещей
+            %h2 Что можно отдать?
             %hr.star-light/
+            %h3 Практически все!
         .row
           .col-sm-4.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
+            %a.portfolio-link{"data-toggle" => "modal", :href => "#modal1"}
               .caption
                 .caption-content
-                  %i.fa.fa-search-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "#{asset_path('portfolio/cabin.png')}"}/
+                  Книги и учебники
+              %img.modal1.img-responsive{:alt => "", :src => "#{asset_path('portfolio/cabin.png')}"}/
           .col-sm-4.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal2"}
+            %a.portfolio-link{"data-toggle" => "modal", :href => "#modal2"}
               .caption
                 .caption-content
-                  %i.fa.fa-search-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "#{asset_path('portfolio/cake.png')}"}/
+                  Одежда и обувь
+              %img.modal1.img-responsive{:alt => "", :src => "#{asset_path('portfolio/cake.png')}"}/
           .col-sm-4.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal3"}
+            %a.portfolio-link{"data-toggle" => "modal", :href => "#modal4"}
               .caption
                 .caption-content
-                  %i.fa.fa-search-plus.fa-3x
-              %img.img-responsive{:alt => "", :src => "#{asset_path('portfolio/circus.png')}"}/
-          .col-sm-4.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal4"}
-              .caption
-                .caption-content
-                  %i.fa.fa-search-plus.fa-3x
+                  Детские игрушки
               %img.img-responsive{:alt => "", :src => "#{asset_path('portfolio/game.png')}"}/
           .col-sm-4.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal5"}
+            %a.portfolio-link{"data-toggle" => "modal", :href => "#modal3"}
               .caption
                 .caption-content
-                  %i.fa.fa-search-plus.fa-3x
+                  Мебель
+              %img.modal1.img-responsive{:alt => "", :src => "#{asset_path('portfolio/circus.png')}"}/
+          .col-sm-4.portfolio-item
+            %a.portfolio-link{"data-toggle" => "modal", :href => "#modal5"}
+              .caption
+                .caption-content
+                  Медицинские препараты
               %img.img-responsive{:alt => "", :src => "#{asset_path('portfolio/safe.png')}"}/
           .col-sm-4.portfolio-item
-            %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal6"}
+            %a.portfolio-link{"data-toggle" => "modal", :href => "#modal6"}
               .caption
                 .caption-content
-                  %i.fa.fa-search-plus.fa-3x
+                  Стройматериалы и иструменты
               %img.img-responsive{:alt => "", :src => "#{asset_path('portfolio/submarine.png')}"}/
     / Contact Section
     %section#signup
       .container
         .row
           .col-lg-12.text-center
-            %h2 Contact Me
+            %h2 Регистрация
             %hr.star-primary/
         .row
-          .col-lg-8.col-lg-offset-2
-            / To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
-            / The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
-            %form#contactForm{:name => "sentMessage", :novalidate => ""}
-              .row.control-group
-                .form-group.col-xs-12.floating-label-form-group.controls
-                  %label Name
-                  %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Name", :required => "", :type => "text"}/
-                  %p.help-block.text-danger
-              .row.control-group
-                .form-group.col-xs-12.floating-label-form-group.controls
-                  %label Email Address
-                  %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Email Address", :required => "", :type => "email"}/
-                  %p.help-block.text-danger
-              .row.control-group
-                .form-group.col-xs-12.floating-label-form-group.controls
-                  %label Phone Number
-                  %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Phone Number", :required => "", :type => "tel"}/
-                  %p.help-block.text-danger
-              .row.control-group
-                .form-group.col-xs-12.floating-label-form-group.controls
-                  %label Message
-                  %textarea#message.form-control{"data-validation-required-message" => "Please enter a message.", :placeholder => "Message", :required => "", :rows => "5"}
-                  %p.help-block.text-danger
-              %br/
-              #success
-              .row
-                .form-group.col-xs-12
-                  %button.btn.btn-success.btn-lg{:type => "submit"} Send
+          = render partial: "devise/shared/new"
     / Footer
     %footer.text-center
       .footer-above
         .container
           .row
-            .footer-col.col-md-4
-              %h3 Location
-              %p
-                3481 Melrose Place
-                %br>/
-                Beverly Hills, CA 90210
-            .footer-col.col-md-4
-              %h3 Around the Web
+            .footer-col.col-md-6.col-lg-offset-3
+              %h3 FreeDonate в соцсетях
               %ul.list-inline
                 %li
                   %a.btn-social.btn-outline{:href => "#"}
@@ -167,214 +139,16 @@
                 %li
                   %a.btn-social.btn-outline{:href => "#"}
                     %i.fa.fa-fw.fa-dribbble
-            .footer-col.col-md-4
-              %h3 About Freelancer
-              %p
-                Freelance is a free to use, open source Bootstrap theme created by
-                = succeed "." do
-                  %a{:href => "http://startbootstrap.com"} Start Bootstrap
       .footer-below
         .container
           .row
             .col-lg-12
-              Copyright © Your Website 2014
+              Copyright © Free Donate 2014
     / Scroll to Top Button (Only visible on small and extra-small screen sizes)
     .scroll-top.page-scroll.visible-xs.visble-sm
       %a.btn.btn-primary{:href => "#page-top"}
         %i.fa.fa-chevron-up
-    / Portfolio Modals
-    #portfolioModal1.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => "#{asset_path('portfolio/cabin.png')}"}/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal2.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => "#{asset_path('portfolio/cake.png')}"}/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal3.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => "#{asset_path('portfolio/circus.png')}"}/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal4.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => "#{asset_path('portfolio/game.png')}"}/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal5.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => "#{asset_path('portfolio/safe.png')}"}/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
-    #portfolioModal6.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-      .modal-content
-        .close-modal{"data-dismiss" => "modal"}
-          .lr
-            .rl
-        .container
-          .row
-            .col-lg-8.col-lg-offset-2
-              .modal-body
-                %h2 Project Title
-                %hr.star-primary/
-                %img.img-responsive.img-centered{:alt => "", :src => "#{asset_path('portfolio/submarine.png')}"}/
-                %p
-                  Use this area of the page to describe your project. The icon above is part of a free icon set by
-                  = succeed "." do
-                    %a{:href => "https://sellfy.com/p/8Q9P/jV3VZ/"} Flat Icons
-                %ul.list-inline.item-details
-                  %li
-                    Client:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Start Bootstrap
-                  %li
-                    Date:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} April 2014
-                  %li
-                    Service:
-                    %strong
-                      %a{:href => "http://startbootstrap.com"} Web Development
-                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
-                  %i.fa.fa-times
-                  Close
+
     / Plugin JavaScript
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
     = javascript_include_tag 'classie'

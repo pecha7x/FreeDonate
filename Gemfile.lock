@@ -1,3 +1,15 @@
+GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: 79c6f47ad3471e4ec652801fae2ecd91998e400c
+  specs:
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,6 +49,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -95,6 +108,7 @@ GEM
     multi_json (1.11.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    orm_adapter (0.5.0)
     pg (0.18.1)
     rack (1.6.0)
     rack-test (0.6.3)
@@ -127,6 +141,8 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     ref (1.0.5)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     ruby_parser (3.6.4)
       sexp_processor (~> 4.1)
     sass (3.4.13)
@@ -168,6 +184,8 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.1.2)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -180,6 +198,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  devise!
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
