@@ -3,7 +3,6 @@ main =
     @presentMoneySliderScheduler()
 
   presentMoneySlider: ->
-    console.log 1
     present_image = $('#present-money .present-image')
     money_image = $('#present-money .money-image')
     present_label = $('#present-money span.present')
