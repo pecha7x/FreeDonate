@@ -1,6 +1,11 @@
 main =
   init: ->
     @presentMoneySliderScheduler()
+    @checkRegistrationErrors()
+
+  checkRegistrationErrors: ->
+    if $('form#new_user #error_explanation').length > 0
+      $('.navbar-nav .page-scroll a[href="#signup"]')[0].click()
 
   presentMoneySlider: ->
     present_image = $('#present-money .present-image')

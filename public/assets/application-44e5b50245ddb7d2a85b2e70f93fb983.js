@@ -11607,7 +11607,13 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 
   main = {
     init: function() {
-      return this.presentMoneySliderScheduler();
+      this.presentMoneySliderScheduler();
+      return this.checkRegistrationErrors();
+    },
+    checkRegistrationErrors: function() {
+      if ($('form#new_user #error_explanation').length > 0) {
+        return $('.navbar-nav .page-scroll a[href="#signup"]')[0].click();
+      }
     },
     presentMoneySlider: function() {
       var money_image, money_label, present_image, present_label;
