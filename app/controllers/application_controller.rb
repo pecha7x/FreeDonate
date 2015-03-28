@@ -2,7 +2,11 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def index
-    redirect_to new_user_registration_path unless current_user
+    if current_user
+      redirect_to product_items_path
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   protected
