@@ -1,23 +1,9 @@
-%h1 Listing product_items
-
-%table
-  %thead
-    %tr
-      %th Name
-      %th Price
-      %th
-      %th
-      %th
-      
-  %tbody
-    - @product_items.each do |product_item|
-      %tr
-        %td= product_item.name
-        %td= product_item.price
-        %td= link_to 'Show', product_item
-        %td= link_to 'Edit', edit_product_item_path(product_item)
-        %td= link_to 'Destroy', product_item, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Product item', new_product_item_path
+.row.product-list
+  - @product_items.each do |product_item|
+    .col-lg-3.col-md-4.col-xs-6.thumb
+      %a.thumbnail{href: "#"}
+        %img.img-responsive{alt: "", src: "http://placehold.it/400x300"}/
+        %span= product_item.name
+.row
+  .col-md-offset-6
+    %a.load-more-products{href: "#"} Load more

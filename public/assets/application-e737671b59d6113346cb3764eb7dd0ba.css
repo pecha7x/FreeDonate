@@ -3100,6 +3100,10 @@ section.success {
 }
 
 @media(max-width:767px) {
+    #bs-example-navbar-collapse-1 .navbar-nav {
+        top: 0px !important;
+    }
+
     section {
         padding: 75px 0;
     }
@@ -3371,6 +3375,139 @@ form#new_user {
 /* line 6, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/main.css.scss */
 form#new_user .btn-success {
   width: 100%;
+}
+/* line 11, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/main.css.scss */
+form#new_user #error_explanation h2 {
+  font-size: 20px;
+  color: #cf0000;
+}
+/* line 2, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .navbar-fixed-top {
+  padding: 10px 0;
+  background-color: #2C3E50;
+}
+/* line 5, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .navbar-fixed-top .navbar-brand {
+  padding-top: 5px;
+}
+/* line 7, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .navbar-fixed-top .navbar-brand span {
+  font-size: 22px;
+}
+/* line 12, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .products-items-container {
+  padding-top: 110px;
+}
+/* line 14, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .products-items-container a {
+  text-decoration: none !important;
+}
+/* line 18, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .products-items-container .product-list a.thumbnail {
+  text-align: center;
+}
+/* line 20, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .products-items-container .product-list a.thumbnail span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  padding: 10px;
+}
+/* line 28, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .products-items-container .product-list a.thumbnail:hover {
+  background-color: #ebebeb !important;
+}
+/* line 30, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .products-items-container .product-list a.thumbnail:hover span {
+  font-weight: 600;
+}
+/* line 36, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .products-items-container a.load-more-products {
+  background-color: inherit;
+}
+/* line 39, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/product_items.scss */
+body#products-items .products-items-container a.load-more-products:hover {
+  color: #149c82;
+}
+/* line 1, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/user/rails_projects/FreeDonate/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
 }
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome

@@ -180,6 +180,10 @@ section.success {
 }
 
 @media(max-width:767px) {
+    #bs-example-navbar-collapse-1 .navbar-nav {
+        top: 0px !important;
+    }
+
     section {
         padding: 75px 0;
     }

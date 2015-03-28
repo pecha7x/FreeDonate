@@ -1,3 +1,43 @@
-// Place all the styles related to the ProductItems controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body#products-items {
+  .navbar-fixed-top {
+    padding: 10px 0;
+    background-color: #2C3E50;
+    .navbar-brand {
+      padding-top: 5px;
+      span {
+        font-size: 22px;
+      }
+    }
+  }
+  .products-items-container {
+    padding-top: 110px;
+    a {
+      text-decoration: none !important;
+    }
+    .product-list {
+      a.thumbnail {
+        text-align: center;
+        span {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          display: block;
+          padding: 10px;
+        }
+      }
+      a.thumbnail:hover {
+        background-color: #ebebeb !important;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    a.load-more-products {
+      background-color: inherit;
+    }
+    a.load-more-products:hover {
+      color: #149c82;
+    }
+  }
+}
