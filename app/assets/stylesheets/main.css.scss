@@ -6,10 +6,11 @@ form#new_user {
   .btn-success {
     width: 100%;
   }
-}
 
-.portfolio-item {
-//  img.modal1 {
-//    width: 256px;
-//  }
+  #error_explanation {
+    h2 {
+      font-size: 20px;
+      color: rgb(207, 0, 0);
+    }
+  }
 }
