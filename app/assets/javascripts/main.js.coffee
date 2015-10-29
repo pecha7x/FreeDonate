@@ -2,37 +2,30 @@ main =
   init: ->
     @presentMoneySliderScheduler()
     @checkRegistrationErrors()
+    presentMoneyContainer = $('#present-money')
+    @present_image = presentMoneyContainer.find('.present-image')
+    @money_image = presentMoneyContainer.find('.money-image')
+    @present_label = presentMoneyContainer.find('span.present')
+    @money_label = presentMoneyContainer.find('span.money')
 
   checkRegistrationErrors: ->
     if $('form#new_user #error_explanation').length > 0
       $('.navbar-nav .page-scroll a[href="#signup"]')[0].click()
 
   presentMoneySlider: ->
-    present_image = $('#present-money .present-image')
-    money_image = $('#present-money .money-image')
-    present_label = $('#present-money span.present')
-    money_label = $('#present-money span.money')
-
-    if money_image.hasClass('hide')
-      money_image.show()
-      money_image.removeClass('hide')
-      present_image.hide()
-      present_image.addClass('hide')
-
-      present_label.addClass('skills')
-      present_label.removeClass('name')
-      money_label.addClass('name')
-      money_label.removeClass('skills')
+    if @money_image.hasClass('hide')
+      main.procSlider({img: @money_image, lb: @money_label}, {img: @present_image, lb: @present_label})
+    else if @present_image.hasClass('hide')
+      main.procSlider({img: @present_image, lb: @present_label}, {img: @money_image, lb: @money_label})
     else
-      present_image.show()
-      present_image.removeClass('hide')
-      money_image.hide()
-      money_image.addClass('hide')
+      main.presentMoneySlider()
 
-      money_label.addClass('skills')
-      money_label.removeClass('name')
-      present_label.addClass('name')
-      present_label.removeClass('skills')
+  procSlider: (will_show, will_hide) ->
+    will_show.img.show().removeClass('hide')
+    will_hide.img.hide().addClass('hide')
+    will_hide.lb.addClass('skills').removeClass('name')
+    will_show.lb.addClass('name').removeClass('skills')
+
 
   presentMoneySliderScheduler: ->
     test = ->
